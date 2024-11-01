@@ -6,108 +6,126 @@
     <title>Fejér Tímea | Portfólió</title>
 
     <!-- Favicon -->
-     <link rel="shortcut icon" href="./assets/ico/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/ico/favicon-16x16.png" type="image/x-icon">
 
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
-
-    <!-- Header: Logo, Nav -->
-
+    <!-- Header -->
     <header>
-        <a href="#fooldal">FT</a>
+        <!-- Logo -->
+        <a href="#fooldal" class="logo">FT</a>
+        <!-- Nav -->
         <nav>
-            <ul>
-                <li><a href="#fooldal">Főoldal</a></li>
-                <li><a href="#rolam">Rólam</a></li>
-                <li><a href="#portfolio">Portfólió</a></li>
-                <li><a href="#kapcsolat">Kapcsolat</a></li>
+            <!-- Hamburger menu-->
+            <input type="checkbox" name="checkbox" id="nav-checkbox" class="nav-checkbox">
+            <label for="nav-checkbox">
+                <span class="nav-checkbox__button">
+                    <span class="nav-checkbox__line"></span>
+                    <span class="nav-checkbox__line"></span>
+                    <span class="nav-checkbox__line"></span>
+                </span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#fooldal"  class="nav-link">Főoldal</a></li>
+                <li><a href="#rolam"  class="nav-link">Rólam</a></li>
+                <li><a href="#portfolio"  class="nav-link">Portfólió</a></li>
+                <li><a href="#kapcsolat"  class="nav-link">Kapcsolat</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main: Főoldal, Rólam, Portfólió, Kapcsolat -->
-
+    <!-- Main -->
     <main>
-
         <!-- Főoldal -->
-
-        <section id="fooldal">
+        <section id="fooldal" class="section-fooldal">
             <!-- Szöveg -->
-            <div>
-                <h1>Fejér Tímea</h1>
-                <h2>Frontend fejlesztő</h2>
-                <a href="#kapcsolat">Kapcsolat</a>
-                <a href="./assets/download/cv.pdf">Önéletrajz</a>
+            <div class="fooldal-szoveg">
+                <h1 class="fooldal-nev">Fejér Tímea</h1>
+                <h2 class="fooldal-szakma">Front-end webfejlesztő</h2>
+                <div class="buttons">
+                    <a href="#kapcsolat" class="btn">Kapcsolat</a>
+                    <a href="./assets/download/cv.pdf" class="btn">Önéletrajz</a>
+                </div>
             </div>
             <!-- Kép -->
-            <div>
-                <img src="./assets/img/Avatar.jpg" alt="Fejér Tímea">
-            </div>
+            <img src="./assets/img/avatar.jpg" alt="Fejér Tímea" class="avatar">
         </section>
 
         <!-- Rólam -->
-
-        <section id="rolam">
+        <section id="rolam" class="section-rolam">
             <!-- Bemutatkozás -->
-            <div>
+            <div class="rolam-bemutatkozas">
                 <h3>Helló!</h3>
-                <h3>A nevem Fejér Tímea.</h3>
-                <p>Junior front-end fejlesztő vagyok.</p>
+                <p>Üdvözöllek a Portfólió oldalamon!</p>
+                <p>A nevem <span class="kiemeles">Fejér Tímea</span>.</p>
+                <p><span class="kiemeles">Front-end webfejlesztő</span> vagyok.</p>
             </div>
-            <!-- Tudás -->
-            <div>
+            <!-- Technológiák -->
+            <div class="rolam-technologiak">
                 <h3>Technológiák</h3>
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-github"></i>
-            </div>
-        </section>
-
-        <!-- Portfólió -->
-        <section id="portfolio">
-            <h2>Portfólió</h2>
-            <div class="portfolio-kontener">
-                <div class="portfolio-elem">
-                    <img src="" alt="">
-                    <p></p>
+                <div>
+                    <i class="fa-brands fa-html5  icon" title="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt  icon" title="CSS3"></i>
+                    <i class="fa-brands fa-js  icon" title="JavaScript"></i>
+                    <i class="fa-brands fa-github  icon" title="GitHub"></i>
                 </div>
             </div>
         </section>
 
+        <!-- Portfólió -->
+        <section id="portfolio" class="section-portfolio">
+            <h2 class="section-title">Portfólió</h2>
+            <div class="portfolio-kontener">
+                <div class="portfolio-elem">Projekt 1</div>
+                <div class="portfolio-elem">Projekt 2</div>
+                <div class="portfolio-elem">Projekt 3</div>
+            </div>
+        </section>
+
         <!-- Kapcsolat -->
-        <section id="kapcsolat">
-            <h2>Kapcsolat</h2>
+        <section id="kapcsolat"  class="section-kapcsolat">
+            <h2 class="section-title">Kapcsolat</h2>
             <!-- Űrlap -->
-            <form action="https://formspree.io/f/movaaezd" method="post">
-                <section>
-                    <label for="nev">Név: </label>
-                    <input type="text" name="nev" id="nev" required>
-                </section>
-                <section>
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" required>
-                </section>
-                <section>
-                    <label for="uzenet">Üzenet: </label>
-                    <textarea name="uzenet" id="uzenet" required></textarea>
-                </section>
-                <input type="submit" value="Küldés">
+            <form action="https://formspree.io/f/movaaezd" method="post" class="kapcsolat-form">
+                <div class="form-elem">
+                    <label for="nev" class="form-label">Név: </label>
+                    <input type="text" name="nev" id="nev" class="form-input" required >
+                </div>
+                <div class="form-elem">
+                    <label for="email" class="form-label">Email: </label>
+                    <input type="email" name="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-elem">
+                    <label for="uzenet" class="form-label  textarea-label">Üzenet: </label>
+                    <textarea name="uzenet" id="uzenet" class="form-input form-textarea" required></textarea>
+                </div>
+                <input type="submit" value="Küldés" class="btn">
             </form>
             <div class="kapcsolat-kozosseg">
-                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin  social-icon"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-square-github  social-icon"></i></a>
             </div>
         </section>
     </main>
 
-    <!-- Footer: Info, Vissza az oldal tetejére nyíl -->
-
+    <!-- Footer -->
     <footer>
-        <p>Copyright <span>&copy;</span> 2024 Fejér Tímea</p>
-        <a href="#fooldal"><i class="fa-solid fa-arrow-up"></i></a>
+        <p class="copyright">Copyright <span>&copy;</span> 2024 Fejér Tímea</p>
+        <a href="#fooldal">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </footer>
 </body>
 </html>
