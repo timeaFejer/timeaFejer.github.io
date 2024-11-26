@@ -239,8 +239,22 @@ main {
     color: black;
     font-size: 2.5rem;
     text-align: center;
-    line-height: 200px;
     box-shadow: 3px 3px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-icon {
+    display: inline-block;
+    font-size: 5rem;
+    margin: 1.5rem auto;
+    color: var(--black);
+}
+
+.project-icon:hover {
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Kapcsolat */
